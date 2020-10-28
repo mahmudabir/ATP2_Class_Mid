@@ -1,0 +1,30 @@
+﻿@model Data_Passing.Models.Person  
+@{
+    ViewBag.Title = "Another";
+}
+
+<h2>Another</h2>
+
+
+<table>
+    <tr>
+        <td>Name:</td>
+        <td>@TempData["name"]</td>
+    </tr>
+    <tr>
+        <td>Username:</td>
+        <td>@TempData["username"]</td>
+    </tr>
+    <tr>
+        <td>Blood Group:</td>
+        <td>@TempData["blood_group"]</td>
+    </tr>
+    <tr>
+        <td>Gender:</td>
+        <td>@TempData["gender"]</td>
+    </tr>
+    <tr>
+        <td>Date Of Birth:</td>
+        <td>@TempData["dob"]</td>
+    </tr>
+</table>
