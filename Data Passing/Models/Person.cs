@@ -7,7 +7,8 @@ namespace Data_Passing.Models
 {
     public class Person
     {
-        public string name { get; set; }
-        public string emails { get; internal set; }
+        public string Name { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
     }
 }
