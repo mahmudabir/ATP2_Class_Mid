@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scafolding Techniques", "Scafolding Techniques.csproj", "{48CBD31C-84B0-4689-9B41-CCC64ABF9F0A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{48CBD31C-84B0-4689-9B41-CCC64ABF9F0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48CBD31C-84B0-4689-9B41-CCC64ABF9F0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48CBD31C-84B0-4689-9B41-CCC64ABF9F0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48CBD31C-84B0-4689-9B41-CCC64ABF9F0A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ABE57F46-A457-4190-A218-261E860AC47E}
+	EndGlobalSection
+EndGlobal
