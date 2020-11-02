@@ -58,5 +58,39 @@ namespace Scafolding_Techniques.Controllers
             persons.Add(p);
             return RedirectToAction("Index");
         }
+
+
+        [HttpGet]
+        public ActionResult Delete(int id)
+        {
+            Person p = persons.Where(x => x.Id == id).First();
+            return View(p);
+        }
+
+        [HttpPost]
+        public ActionResult Delete(int id, Person p)
+        {
+            var item = persons.Where(x => x.Id == id).First();
+            persons.Remove(item);
+            return RedirectToAction("Index");
+        }
+
+
+        [HttpGet]
+        public ActionResult Details(int id)
+        {
+            Person p = persons.Where(x => x.Id == id).First();
+            return View(p);
+        }
+
+        //[HttpPost]
+        //public ActionResult Details(int id, Person p)
+        //{
+        //    var item = persons.Where(x => x.Id == id).First();
+        //    persons.Remove(item);
+        //    return RedirectToAction("Index");
+        //}
+
+
     }
 }
