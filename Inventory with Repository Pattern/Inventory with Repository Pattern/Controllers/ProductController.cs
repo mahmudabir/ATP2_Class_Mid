@@ -27,8 +27,16 @@ namespace Inventory_with_Repository_Pattern.Controllers
         [HttpPost]
         public ActionResult Create(Product p)
         {
-            proRepo.Insert(p);
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                proRepo.Insert(p);
+                return RedirectToAction("Index");
+            }
+
+            CategoryRepository catRepo = new CategoryRepository();
+            ViewData["categories"] = catRepo.GetAll();
+            return View();
+
         }
 
         [HttpGet]
@@ -49,10 +57,10 @@ namespace Inventory_with_Repository_Pattern.Controllers
         [HttpGet]
         public ActionResult Delete(int id)
         {
-            
+
             return View(proRepo.Get(id));
         }
-        [HttpPost,ActionName("Delete")]
+        [HttpPost, ActionName("Delete")]
         public ActionResult ConfirmDelete(int id)
         {
             proRepo.Delete(id);
@@ -65,6 +73,12 @@ namespace Inventory_with_Repository_Pattern.Controllers
             return View(proRepo.GetTopProducts(2));
         }
 
-       
+        [NonAction]
+        public int calculate()
+        {
+            return 10 + 10;
+        }
+
+
     }
 }

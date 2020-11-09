@@ -11,14 +11,15 @@ namespace Inventory_with_Repository_Pattern.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Product
     {
         public int ProductId { get; set; }
         public string ProductName { get; set; }
         public double Price { get; set; }
         public int CategoryId { get; set; }
-    
         public virtual Category Category { get; set; }
     }
 }

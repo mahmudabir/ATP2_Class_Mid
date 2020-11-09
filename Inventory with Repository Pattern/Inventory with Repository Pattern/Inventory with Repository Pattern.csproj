@@ -135,9 +135,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>InventoryModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\PartialProduct.cs" />
     <Compile Include="Models\Product.cs">
       <DependentUpon>InventoryModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ProductMetaData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\CategoryRepository.cs" />
     <Compile Include="Repositories\IRepository.cs" />
