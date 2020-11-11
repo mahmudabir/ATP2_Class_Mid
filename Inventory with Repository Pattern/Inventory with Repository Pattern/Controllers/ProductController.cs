@@ -12,14 +12,28 @@ namespace Inventory_with_Repository_Pattern.Controllers
     {
         ProductRepository proRepo = new ProductRepository();
         // GET: Product
+
+
+        //State Management
+        //Session Management
+        //1. InProc
+        //2. StateServer
+        //3. SqlServer  
+        //4. Custom
+        //5. Off
         public ActionResult Index()
         {
+            Session["test"] = "Hello from session";
             return View(proRepo.GetAll());
         }
 
         [HttpGet]
         public ActionResult Create()
         {
+            //if (Session["test"] == null)
+            //{
+            //    return RedirectToAction("Index");
+            //}
             CategoryRepository catRepo = new CategoryRepository();
             ViewData["categories"] = catRepo.GetAll();
             return View();
