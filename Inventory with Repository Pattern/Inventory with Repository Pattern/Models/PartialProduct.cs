@@ -6,8 +6,8 @@ using System.Web;
 
 namespace Inventory_with_Repository_Pattern.Models
 {
-    [MetadataType(typeof(Product))]
-    public class PartialProduct
+    [MetadataType(typeof(ProductMetaData))]
+    public partial class Product
     {
     }
 }
